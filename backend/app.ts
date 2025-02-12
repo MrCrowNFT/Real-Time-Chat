@@ -12,9 +12,11 @@ app.get("/", (req, res) => {
   res.status(200).send("Home");
 });
 
+//triggers when client connect to server
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
   
+  //listen to msg and broadcast them to clients
   socket.on("message", (msg) => {
     console.log("Message received:", msg);
     io.emit("message", msg);
