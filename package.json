@@ -4,7 +4,7 @@
   "description": "Real time chat app using web sockets for functionality",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/app"
+    "dev": "ts-node backend/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
     "@types/express": "^5.0.0",
     "@types/socket.io": "^3.0.1",
     "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
   "dependencies": {
