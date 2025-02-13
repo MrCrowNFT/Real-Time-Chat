@@ -27,6 +27,6 @@ io.on("connection", (socket) => {
 
 const PORT = process.env.PORT || 5500;
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log("Server started at http://localhost:" + PORT);
 });
