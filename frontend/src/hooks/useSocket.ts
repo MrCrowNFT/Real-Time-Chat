@@ -17,14 +17,15 @@ export const useSocket = () => {
     };
   }, []);
 
-  useEffect(() => { //ERROR//
+  useEffect(() => {
     //only work if there is a socket
     if (!socket) return;
 
-     // listen for message events
-     const handleMessage = (msg: string) => {
+    // listen for message events
+    const handleMessage = (msg: string) => {
       setMessages((prev) => [...prev, msg]);
     };
+    socket.on("message", handleMessage);
 
     return () => {
       socket.off("message", handleMessage);
